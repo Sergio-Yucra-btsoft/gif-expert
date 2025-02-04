@@ -4,7 +4,7 @@ import { GifGrid } from "./components/GifGrid";
 
 export const GiftExpertApp = () => {
 
-    const [categories, setCategories] = useState(['One Punch', 'Data']);
+    const [categories, setCategories] = useState(['One Punch']);
 
     const onAddCategory = ( newCategory ) => {
         if ( categories.includes(newCategory)) return;
