@@ -5,16 +5,21 @@ export const GiftExpertApp = () => {
 
     const [categories, setCategories] = useState(['One Punch', 'Data']);
 
-    const onAddCategory = () => {
-        setCategories([ ...categories, 'new']);
+    const onAddCategory = ( newCategory ) => {
+        // console.log(newCategory);
+        
+        setCategories([ newCategory, ...categories]);
     }
     return (
         <>
             {/* titulo */}
             <h1>GifExpertApp</h1>
-            
+
             {/* input */}
-            <AddCategory setCategories={setCategories} />
+            <AddCategory 
+                // setCategories={setCategories} 
+                onNewCategory = { onAddCategory }
+            />
             {/* Listado de gift */}
             {/* <button onClick={ onAddCategory }>Agregar</button> */}
             <ol>
